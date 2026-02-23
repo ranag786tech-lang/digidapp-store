@@ -1,457 +1,179 @@
-# ⚛️ DigiDapp Store
-
-<div align="center">
-
-![Status](https://img.shields.io/badge/Status-Live-00f2ff?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-ff00ff?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Web3-ffff00?style=for-the-badge)
+# ⚛️ DigiDapp Store v2.0
 
 **Decentralize Your Digital Life**
 
-[Live Demo](#) | [Portfolio](https://digitaldairy786.github.io/digitaldairy786-portfolio) | [Contact](#contact)
+---
 
-</div>
+## 🎬 **What's New?**
+
+✅ Professional intro animation (11 seconds)  
+✅ 7 beautiful cinematic images  
+✅ Smooth transitions & effects  
+✅ Skip button & progress bar  
+✅ Mobile optimized  
 
 ---
 
-## بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ 🌙
+## 🚀 **Quick Start**
 
----
+### **1. Download Files:**
+```
+✅ index.html
+✅ style.css
+✅ script.js
+✅ images/ (7 images)
+```
 
-## 🌟 About DigiDapp Store
-
-DigiDapp Store is a revolutionary digital marketplace that combines traditional app distribution with Web3 technologies. More than just a store—it's a movement towards digital independence and true ownership.
-
-### **Tagline**
-> **"Decentralize Your Digital Life"**
-
----
-
-## ✨ What We Offer
-
-DigiDapp Store provides a comprehensive ecosystem of digital assets:
-
-### 📱 **Apps**
-- Productivity applications
-- Creative tools
-- Developer utilities
-- Business solutions
-- Entertainment apps
-
-### 🎨 **Themes & Wallpapers**
-- Phone themes
-- Desktop wallpapers (4K, 8K)
-- Icon packs
-- Widget designs
-- Color schemes
-
-### 💬 **Stickers**
-- Animated stickers
-- Static sticker packs
-- Emoji collections
-- GIF libraries
-- Social media stickers
-
-### 💎 **NFTs** (Coming Soon)
-- Digital art NFTs
-- Limited edition themes
-- Premium sticker NFTs
-- Collectible assets
-- Creator collaborations
-
----
-
-## 🚀 Features
-
-### **Core Features**
-- ✅ Beautiful quantum-themed UI
-- ✅ Particle system background
-- ✅ Smooth animations
-- ✅ Responsive design (mobile-first)
-- ✅ Fast performance
-- ✅ Cross-browser compatible
-
-### **Interactive Elements**
-- ✅ Dynamic navigation
-- ✅ Scroll animations
-- ✅ Hover effects
-- ✅ Loading animations
-- ✅ Notification system
-- ✅ Smooth scrolling
-
-### **Coming Soon**
-- 🔜 NFT marketplace
-- 🔜 Web3 wallet integration
-- 🔜 Crypto payments
-- 🔜 User accounts
-- 🔜 Creator dashboard
-- 🔜 Payment processing
-
----
-
-## 🛠️ Technologies Used
-
-### **Frontend**
-- HTML5
-- CSS3 (Custom animations)
-- JavaScript (ES6+)
-
-### **Design**
-- Google Fonts (Orbitron, Inter)
-- Font Awesome 6.4.0
-- Custom particle system
-- Quantum color palette
-
-### **Future Stack**
-- React.js (Phase 2)
-- Node.js + Express (Backend)
-- MongoDB (Database)
-- Web3.js (Blockchain)
-- Polygon Network (NFTs)
-
----
-
-## 📁 File Structure
-
+### **2. Folder Structure:**
 ```
 digidapp-store/
-│
-├── index.html          # Main HTML file
-├── style.css           # All styles and animations
-├── script.js           # Interactive functionality
-└── README.md           # This file
+├── index.html
+├── style.css
+├── script.js
+└── images/
+    ├── act1-gate.png
+    ├── act2-apps.png
+    ├── act3-themes.png
+    ├── act4-stickers.png
+    ├── act5-nfts.png
+    ├── act6-creators.png
+    └── act7-heart.png
+```
+
+### **3. Deploy:**
+
+**Netlify:**
+```
+1. netlify.com
+2. Drag & drop folder
+3. Live!
+```
+
+**GitHub Pages:**
+```
+1. Upload to repository
+2. Settings → Pages
+3. Enable
+4. Live!
 ```
 
 ---
 
-## 🎨 Design System
+## 🎯 **Features**
 
-### **Color Palette**
-
-```css
-Primary:    #00f2ff  /* Cyan */
-Secondary:  #ff00ff  /* Magenta */
-Accent:     #ffff00  /* Yellow */
-Background: #0a192f  /* Dark Blue */
-```
-
-### **Typography**
-
-```
-Headers:  Orbitron (Google Fonts)
-Body:     Inter (Google Fonts)
-```
-
-### **Gradients**
-
-```css
---gradient-quantum: linear-gradient(135deg, #00f2ff 0%, #ff00ff 50%, #ffff00 100%);
-```
+✅ Apps marketplace  
+✅ Themes & wallpapers  
+✅ Sticker packs  
+✅ NFT showcase  
+✅ Intro animation  
+✅ Particle background  
+✅ Fully responsive  
 
 ---
 
-## 🚀 Quick Start
+## 📱 **Live Demo**
 
-### **Option 1: Direct Open**
-Simply open `index.html` in any modern web browser.
-
-### **Option 2: Local Server**
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
-```
-
-Then open: http://localhost:8000
-
-### **Option 3: Deploy to GitHub Pages**
-
-```bash
-# 1. Create a new repository
-git init
-git add .
-git commit -m "Initial commit: DigiDapp Store"
-
-# 2. Push to GitHub
-git remote add origin https://github.com/YOUR_USERNAME/digidapp-store.git
-git branch -M main
-git push -u origin main
-
-# 3. Enable GitHub Pages in repository settings
-# Settings → Pages → Source: main branch
-```
-
-Your site will be live at: `https://YOUR_USERNAME.github.io/digidapp-store`
+🌐 [Your URL Here]
 
 ---
 
-## 📱 Responsive Breakpoints
+## 🎨 **Animation**
 
-| Device | Breakpoint | Layout |
-|--------|-----------|--------|
-| Desktop | 1200px+ | Full grid (3-4 columns) |
-| Tablet | 768px - 1200px | Medium grid (2 columns) |
-| Mobile | < 768px | Single column |
-| Small Mobile | < 480px | Compact view |
-
----
-
-## 🎯 Key Sections
-
-### **1. Hero Section**
-- Dynamic greeting
-- Animated tagline
-- Stats showcase (234+ Apps, 156+ Themes, 89+ Stickers, 45+ NFTs)
-- Category badges
-- CTA buttons
-
-### **2. Apps Section**
-- 6 featured apps
-- Free and premium options
-- Ratings and downloads
-- Category tags
-- Download buttons
-
-### **3. Themes Section**
-- 6 wallpaper collections
-- Preview on hover
-- Free and premium themes
-- 4K/8K options
-- Quick download
-
-### **4. Stickers Section**
-- 6 sticker packs
-- Animated previews
-- Pack sizes (20-40 stickers)
-- Multiple categories
-- Instant download
-
-### **5. NFTs Section**
-- 3 featured NFTs
-- Coming soon placeholder
-- Price in ETH
-- Limited editions
-- Web3 info cards
-
-### **6. About Section**
-- Mission statement
-- Feature highlights
-- Statistics
-- Call-to-action
+**7 Acts (11 seconds):**
+- 🔐 The Gate
+- ⚙️ The Realm  
+- 🌈 The Garden
+- 😊 The Festival
+- 👑 The Treasury
+- 🌐 The Circle
+- 💖 The Heart
 
 ---
 
-## 💡 Customization Guide
+## ⚙️ **Customization**
 
-### **Change Colors**
-
-Edit `style.css`:
-
-```css
-:root {
-    --primary-color: #YOUR_COLOR;
-    --secondary-color: #YOUR_COLOR;
-    --accent-color: #YOUR_COLOR;
-}
-```
-
-### **Add New Apps**
-
-Copy the app card structure in `index.html`:
-
-```html
-<div class="item-card app-card">
-    <!-- Your app details -->
-</div>
-```
-
-### **Modify Particle Count**
-
-In `script.js`:
-
+**Change timing:**
 ```javascript
-getParticleCount() {
-    const width = window.innerWidth;
-    if (width > 1200) return 80;  // Desktop
-    if (width > 768) return 50;   // Tablet
-    return 30;                     // Mobile
-}
+// In script.js:
+duration: 1500  // ms per slide
+```
+
+**Disable intro:**
+```javascript
+const SKIP_INTRO = true
 ```
 
 ---
 
-## 🌐 Deployment Options
+## 📚 **Documentation**
 
-### **1. GitHub Pages** (Recommended - FREE)
-- Automatic deployment
-- Custom domain support
-- HTTPS included
-- Instant updates
-
-### **2. Netlify** (FREE)
-- Drag & drop deployment
-- Automatic HTTPS
-- Custom domains
-- Form handling
-
-### **3. Vercel** (FREE)
-- Git integration
-- Edge network
-- Automatic previews
-- Analytics
-
-### **4. Traditional Hosting**
-- Any web hosting service
-- Upload via FTP
-- Works with cPanel
-- No special requirements
+- `START-HERE.md` - Complete guide
+- `QUICK-START.md` - 5-minute setup
+- `INTRO-ANIMATION-GUIDE.md` - Full details
 
 ---
 
-## 📊 Performance
+## 🛠️ **Tech Stack**
 
-### **Metrics**
-- Lighthouse Score: 95+
-- Page Load: < 2 seconds
-- First Paint: < 1 second
-- Interactive: < 2.5 seconds
-
-### **Optimizations**
-- ✅ Throttled scroll events
-- ✅ Debounced resize handlers
-- ✅ Optimized particle system
-- ✅ Lazy loading ready
-- ✅ Minimal dependencies
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+- Quantum Particle System
+- Responsive Design
 
 ---
 
-## 🔮 Roadmap
+## 📊 **Stats**
 
-### **Phase 1: Foundation** (Complete ✅)
-- ✅ Website design and development
-- ✅ Responsive layout
-- ✅ Particle system
-- ✅ All sections functional
-
-### **Phase 2: Dynamic Backend** (In Progress 🚧)
-- 🔜 User authentication
-- 🔜 Database integration
-- 🔜 Admin panel
-- 🔜 API endpoints
-
-### **Phase 3: Web3 Integration** (Q2 2026)
-- 🔜 Wallet connection
-- 🔜 NFT marketplace
-- 🔜 Smart contracts
-- 🔜 IPFS storage
-
-### **Phase 4: Advanced Features** (Q3 2026)
-- 🔜 Creator dashboard
-- 🔜 Revenue sharing
-- 🔜 DAO governance
-- 🔜 Mobile app
+- 234+ Apps
+- 156+ Themes
+- 89+ Stickers
+- 45+ NFTs
 
 ---
 
-## 🤝 Integration with Portfolio
+## 🌟 **Future Plans**
 
-DigiDapp Store is designed to work alongside [DigitalDairy786 Portfolio](https://digitaldairy786.github.io/digitaldairy786-portfolio).
-
-### **Cross-linking**
-- Portfolio links to DigiDapp Store
-- DigiDapp Store links back to Portfolio
-- Unified quantum theme
-- Consistent branding
-
----
-
-## 📞 Contact
-
-### **DigitalDairy786**
-
-- 📧 **Email**: ranag786tech@outlook.com
-- 📧 **Secondary**: ranag786tech@gmail.com
-- 📱 **Phone**: +92 306 6380522
-- 📍 **Location**: Faisalabad, Punjab, Pakistan
-
-### **Social Links**
-
-- 💻 **GitHub**: [ranag786tech-lang](https://github.com/ranag786tech-lang)
-- 📝 **WordPress**: [digitaldairy7866.wordpress.com](https://digitaldairy7866.wordpress.com)
-- 👤 **Gravatar**: [digitaldairy786](https://gravatar.com/digitaldairy786)
-- 🎵 **TikTok**: [@moeezfather4](https://tiktok.com/@moeezfather4)
-- 🧵 **Threads**: [@rh0786123](https://threads.net/rh0786123)
+- [ ] Supabase backend
+- [ ] User authentication
+- [ ] Real downloads
+- [ ] Payment system
+- [ ] NFT marketplace
+- [ ] Web3 integration
 
 ---
 
-## 🌟 Vision
+## 👨‍💻 **Author**
 
-> **"Building the future where creators own their digital assets and users have true control over their digital lives."**
+**DigitalDairy786**
 
-DigiDapp Store isn't just about selling apps—it's about empowering a decentralized digital economy where:
-
-- 🎨 Creators are fairly compensated
-- 💎 Users truly own their purchases
-- ⛓️ Transactions are transparent
-- 🌍 Everyone has equal access
-- 🚀 Innovation is rewarded
+📧 ranag786tech@outlook.com  
+📱 +92 306 6380522  
+🌐 https://digitaldairy786.github.io  
 
 ---
 
-## 📄 License
+## 🇵🇰 **Made in Pakistan**
 
-This project is created by **DigitalDairy786** for personal and educational use.
+**بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ**
 
----
-
-## 🙏 Acknowledgments
-
-- **Font Awesome** for icons
-- **Google Fonts** for typography
-- **Unsplash** for placeholder images
-- **Anthropic (Claude)** for development assistance
+Built with 🤍 by DigitalDairy786
 
 ---
 
-## 🐛 Bug Reports & Feature Requests
+## 📄 **License**
 
-Found a bug or have a feature idea?
-- Open an issue on GitHub
-- Email: ranag786tech@outlook.com
-- Use the contact form on the website
+Personal & Educational Use
 
 ---
 
-## ⭐ Show Your Support
+## 🙏 **Credits**
 
-If you like DigiDapp Store:
-- ⭐ Star the repository on GitHub
-- 🔗 Share with friends
-- 💬 Give feedback
-- 🤝 Contribute ideas
-
----
-
-<div align="center">
-
-## 💖 Built with Love
-
-**DigiDapp Store** is built with 🤍 by **DigitalDairy786**
-
-### بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ✨
-
-**Decentralize Your Digital Life**
+- Font Awesome (Icons)
+- Google Fonts (Typography)
+- Unsplash (Sample images)
+- Claude AI (Development)
 
 ---
 
-© 2026 DigiDapp Store. All Rights Reserved.
-
-[Back to Top](#-digidapp-store)
-
-</div>
+**⚛️ DigiDapp Store - Decentralize Your Digital Life**
