@@ -21,26 +21,40 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* ===== INTRO VIDEO FIX ===== */
-        .intro-video {
+        /* ===== INTRO YOUTUBE VIDEO STYLES ===== */
+        .intro-video-container {
             position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
             z-index: 0;
-            border-radius: inherit;
         }
-
+        
+        .intro-video-container iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 56.25vw; /* 16:9 Aspect Ratio */
+            min-height: 100vh;
+            min-width: 177.77vh;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            border: none;
+        }
+        
         .intro-slide {
             position: relative;
             overflow: hidden;
         }
-
+        
         .intro-slide .intro-text {
             position: relative;
             z-index: 2;
         }
-
+        
         /* Video overlay for text readability */
         .intro-slide::after {
             content: '';
@@ -53,29 +67,29 @@
             );
             z-index: 1;
         }
-
+        
         /* ===== DOWNLOAD BUTTON FIX ===== */
         .download-link {
             display: inline-block;
             text-decoration: none;
             width: 100%;
         }
-
+        
         .btn-card {
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
+        
         .btn-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 25px rgba(0, 255, 200, 0.3);
         }
-
+        
         /* ===== THEMES SECTION ===== */
         .themes-section, .stickers-section, .nfts-section {
             padding: 80px 0;
         }
-
+        
         .theme-card, .sticker-card, .nft-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
@@ -83,20 +97,20 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
+        
         .theme-card:hover, .sticker-card:hover, .nft-card:hover {
             transform: translateY(-8px);
             border-color: rgba(0, 255, 200, 0.4);
             box-shadow: 0 20px 40px rgba(0, 255, 200, 0.15);
         }
-
+        
         .theme-preview {
             width: 100%;
             height: 180px;
             object-fit: cover;
             display: block;
         }
-
+        
         /* Placeholder preview when no image */
         .theme-preview-placeholder {
             width: 100%;
@@ -107,7 +121,7 @@
             font-size: 3rem;
             background: linear-gradient(135deg, #0f3460, #16213e, #1a1a2e);
         }
-
+        
         .sticker-preview {
             width: 100%;
             height: 150px;
@@ -117,14 +131,14 @@
             font-size: 4rem;
             background: linear-gradient(135deg, rgba(0,255,200,0.1), rgba(0,100,255,0.1));
         }
-
+        
         .nft-preview {
             width: 100%;
             height: 200px;
             object-fit: cover;
             display: block;
         }
-
+        
         .nft-preview-placeholder {
             width: 100%;
             height: 200px;
@@ -136,30 +150,30 @@
             background-size: 200% 200%;
             animation: gradientShift 3s ease infinite;
         }
-
+        
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
+        
         .card-price {
             font-size: 1.1rem;
             font-weight: 700;
             color: #00ffc8;
         }
-
+        
         .card-price.free {
             color: #00ff88;
         }
-
+        
         .items-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 24px;
             margin-top: 40px;
         }
-
+        
         .item-card {
             background: rgba(255,255,255,0.05);
             border: 1px solid rgba(255,255,255,0.1);
@@ -167,20 +181,20 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
+        
         .item-card:hover {
             transform: translateY(-8px);
             border-color: rgba(0, 255, 200, 0.4);
             box-shadow: 0 20px 40px rgba(0, 255, 200, 0.15);
         }
-
+        
         .card-header {
             padding: 20px;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-
+        
         .app-icon {
             width: 56px; height: 56px;
             border-radius: 14px;
@@ -191,14 +205,14 @@
             color: white;
             background: linear-gradient(135deg, #00ffc8, #0066ff);
         }
-
+        
         .gradient-bg-1 { background: linear-gradient(135deg, #00ffc8, #0066ff); }
         .gradient-bg-2 { background: linear-gradient(135deg, #ff6b6b, #feca57); }
         .gradient-bg-3 { background: linear-gradient(135deg, #a29bfe, #6c5ce7); }
         .gradient-bg-4 { background: linear-gradient(135deg, #fd79a8, #e17055); }
         .gradient-bg-5 { background: linear-gradient(135deg, #55efc4, #00b894); }
         .gradient-bg-6 { background: linear-gradient(135deg, #fdcb6e, #e17055); }
-
+        
         .card-badge {
             padding: 4px 12px;
             border-radius: 20px;
@@ -208,17 +222,17 @@
             color: #00ffc8;
             border: 1px solid rgba(0, 255, 200, 0.3);
         }
-
+        
         .card-badge.paid {
             background: rgba(255, 107, 107, 0.15);
             color: #ff6b6b;
             border-color: rgba(255, 107, 107, 0.3);
         }
-
+        
         .card-content {
             padding: 0 20px 16px;
         }
-
+        
         .card-title {
             font-size: 1.1rem;
             font-weight: 700;
@@ -226,20 +240,20 @@
             margin-bottom: 8px;
             font-family: 'Orbitron', sans-serif;
         }
-
+        
         .card-description {
             font-size: 0.875rem;
             color: rgba(255,255,255,0.6);
             line-height: 1.5;
             margin-bottom: 12px;
         }
-
+        
         .card-meta {
             display: flex;
             gap: 16px;
             margin-bottom: 12px;
         }
-
+        
         .rating, .downloads {
             display: flex;
             align-items: center;
@@ -247,16 +261,16 @@
             font-size: 0.875rem;
             color: rgba(255,255,255,0.7);
         }
-
+        
         .rating i { color: #feca57; }
         .downloads i { color: #00ffc8; }
-
+        
         .card-tags {
             display: flex;
             gap: 8px;
             flex-wrap: wrap;
         }
-
+        
         .tag {
             padding: 3px 10px;
             border-radius: 12px;
@@ -264,14 +278,14 @@
             background: rgba(255,255,255,0.08);
             color: rgba(255,255,255,0.6);
         }
-
+        
         .card-footer {
             padding: 16px 20px;
             display: flex;
             gap: 10px;
             border-top: 1px solid rgba(255,255,255,0.08);
         }
-
+        
         .btn-card {
             flex: 1;
             padding: 10px 16px;
@@ -287,12 +301,12 @@
             transition: all 0.3s ease;
             text-decoration: none;
         }
-
+        
         .btn-card.btn-primary {
             background: linear-gradient(135deg, #00ffc8, #0066ff);
             color: #000;
         }
-
+        
         .btn-card.btn-secondary {
             background: rgba(255,255,255,0.08);
             color: rgba(255,255,255,0.7);
@@ -300,12 +314,12 @@
             width: 40px;
             padding: 10px;
         }
-
+        
         .btn-card.btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0, 255, 200, 0.4);
         }
-
+        
         .nft-price-row {
             display: flex;
             align-items: center;
@@ -313,31 +327,31 @@
             padding: 12px 16px;
             background: rgba(255,255,255,0.05);
         }
-
+        
         .nft-price-label {
             font-size: 0.75rem;
             color: rgba(255,255,255,0.5);
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
-
+        
         .nft-price-value {
             font-size: 1rem;
             font-weight: 700;
             color: #00ffc8;
             font-family: 'Orbitron', sans-serif;
         }
-
+        
         /* Section styles */
         .section {
             padding: 80px 0;
         }
-
+        
         .section-header {
             text-align: center;
             margin-bottom: 20px;
         }
-
+        
         .section-badge {
             display: inline-flex;
             align-items: center;
@@ -350,7 +364,7 @@
             border: 1px solid rgba(0, 255, 200, 0.2);
             margin-bottom: 16px;
         }
-
+        
         .section-title {
             font-size: 2rem;
             font-weight: 800;
@@ -358,57 +372,40 @@
             font-family: 'Orbitron', sans-serif;
             margin-bottom: 12px;
         }
-
+        
         .section-description {
             color: rgba(255,255,255,0.6);
             max-width: 500px;
             margin: 0 auto;
         }
-
+        
         .section-footer {
             text-align: center;
             margin-top: 40px;
         }
-
+        
         .about-section {
             padding: 80px 0;
             background: rgba(255,255,255,0.02);
         }
     </style>
-    
-    <!-- Vercel Web Analytics -->
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
     <!-- =============================================
-         INTRO ANIMATION SEQUENCE
-         
-         📁 AAPKO YEH KARNA HAI:
-         Apne repo mein "videos/" folder banao
-         aur in 7 files upload karo:
-         - videos/act1-gate.mp4
-         - videos/act2-apps.mp4
-         - videos/act3-themes.mp4
-         - videos/act4-stickers.mp4
-         - videos/act5-nfts.mp4
-         - videos/act6-creators.mp4
-         - videos/act7-heart.mp4
+         INTRO ANIMATION SEQUENCE WITH YOUTUBE VIDEOS
          ============================================= -->
     <div id="introSequence" class="intro-sequence">
         <div class="intro-container">
 
             <!-- Act I: The Gate -->
-            <div class="intro-slide active" data-act="1">
-                <!-- ✅ VIDEO TAG - MP4 pehle, WebM fallback, phir image fallback -->
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act1-gate.mp4" type="video/mp4">
-                    <source src="./videos/act1-gate.webm" type="video/webm">
-                </video>
-                <!-- Image fallback (agar video na mile) -->
-                <img src="./images/act1-gate.png" alt="The Gate of Independence" class="intro-image intro-image-fallback">
+            <div class="intro-slide active" data-act="1" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/K-Y1ExRwKVQ?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=K-Y1ExRwKVQ" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Gate of Independence</h2>
                     <p class="intro-subtitle">Unlock the potential within</p>
@@ -416,12 +413,14 @@
             </div>
 
             <!-- Act II: The Realm of Apps -->
-            <div class="intro-slide" data-act="2">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act2-apps.mp4" type="video/mp4">
-                    <source src="./videos/act2-apps.webm" type="video/webm">
-                </video>
-                <img src="./images/act2-apps.png" alt="The Realm of Apps" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="2" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/C9vVfdbHlOc?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=C9vVfdbHlOc" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Realm of Apps</h2>
                     <p class="intro-subtitle">A universe of utility awaits</p>
@@ -429,12 +428,14 @@
             </div>
 
             <!-- Act III: The Garden of Themes -->
-            <div class="intro-slide" data-act="3">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act3-themes.mp4" type="video/mp4">
-                    <source src="./videos/act3-themes.webm" type="video/webm">
-                </video>
-                <img src="./images/act3-themes.png" alt="The Garden of Themes" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="3" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ew6xDX0C0rA?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=ew6xDX0C0rA" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Garden of Themes</h2>
                     <p class="intro-subtitle">A canvas for your identity</p>
@@ -442,12 +443,14 @@
             </div>
 
             <!-- Act IV: The Festival of Stickers -->
-            <div class="intro-slide" data-act="4">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act4-stickers.mp4" type="video/mp4">
-                    <source src="./videos/act4-stickers.webm" type="video/webm">
-                </video>
-                <img src="./images/act4-stickers.png" alt="The Festival of Stickers" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="4" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/Kb43t6u2mvM?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=Kb43t6u2mvM" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Festival of Stickers</h2>
                     <p class="intro-subtitle">Expression without limits</p>
@@ -455,12 +458,14 @@
             </div>
 
             <!-- Act V: The Treasury of NFTs -->
-            <div class="intro-slide" data-act="5">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act5-nfts.mp4" type="video/mp4">
-                    <source src="./videos/act5-nfts.webm" type="video/webm">
-                </video>
-                <img src="./images/act5-nfts.png" alt="The Treasury of NFTs" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="5" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ldIr14KBILU?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=ldIr14KBILU" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Treasury of NFTs</h2>
                     <p class="intro-subtitle">True ownership awaits</p>
@@ -468,12 +473,14 @@
             </div>
 
             <!-- Act VI: The Circle of Creators -->
-            <div class="intro-slide" data-act="6">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act6-creators.mp4" type="video/mp4">
-                    <source src="./videos/act6-creators.webm" type="video/webm">
-                </video>
-                <img src="./images/act6-creators.png" alt="The Circle of Creators" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="6" data-duration="7000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/ZxnfQyfW-MA?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=ZxnfQyfW-MA" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text">
                     <h2 class="intro-title">The Circle of Creators</h2>
                     <p class="intro-subtitle">Built by the many, for the many</p>
@@ -481,12 +488,14 @@
             </div>
 
             <!-- Act VII: The Heart -->
-            <div class="intro-slide" data-act="7">
-                <video class="intro-video" autoplay muted playsinline>
-                    <source src="./videos/act7-heart.mp4" type="video/mp4">
-                    <source src="./videos/act7-heart.webm" type="video/webm">
-                </video>
-                <img src="./images/act7-heart.png" alt="DigiDapp Store" class="intro-image intro-image-fallback">
+            <div class="intro-slide" data-act="7" data-duration="8000">
+                <div class="intro-video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/EIGRkDBXbH8?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&playsinline=1&loop=1&playlist=EIGRkDBXbH8" 
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
                 <div class="intro-text intro-finale">
                     <h1 class="intro-logo">⚛️ DigiDapp Store</h1>
                     <p class="intro-tagline">Decentralize Your Digital Life</p>
@@ -606,8 +615,6 @@
 
     <!-- =============================================
          APPS SECTION
-         📁 Download files: apps/ folder mein rakho
-         Example: apps/quantum-editor.apk
          ============================================= -->
     <section id="apps" class="section apps-section">
         <div class="container">
@@ -620,7 +627,6 @@
             </div>
 
             <div class="items-grid">
-
                 <!-- App 1: Quantum Editor -->
                 <div class="item-card app-card">
                     <div class="card-header">
@@ -640,7 +646,6 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <!-- ✅ DOWNLOAD LINK FIX: href mein apni file ka path dalo -->
                         <a href="./apps/quantum-editor.apk" download class="btn-card btn-primary">
                             <i class="fas fa-download"></i> Download
                         </a>
@@ -779,22 +784,20 @@
                         <button class="btn-card btn-secondary"><i class="fas fa-info-circle"></i></button>
                     </div>
                 </div>
-
             </div>
 
             <div class="section-footer">
-                <button class="btn btn-outline">
-                    <span>View All Apps</span>
+                <a href="https://youtube.com/@rana-w7e2b" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-youtube"></i>
+                    <span>Watch App Demos on YouTube</span>
                     <i class="fas fa-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- =============================================
          THEMES SECTION
-         📁 Files: themes/ folder mein rakho
-         Example: themes/nebula-dark.zip
          ============================================= -->
     <section id="themes" class="section themes-section">
         <div class="container">
@@ -807,11 +810,8 @@
             </div>
 
             <div class="items-grid">
-
                 <!-- Theme 1 -->
                 <div class="item-card theme-card">
-                    <!-- ✅ Agar aapke paas theme preview image hai to yahan rakho -->
-                    <!-- <img src="./themes/previews/nebula-dark.jpg" alt="Nebula Dark" class="theme-preview"> -->
                     <div class="theme-preview-placeholder">🌌</div>
                     <div class="card-content">
                         <h3 class="card-title">Nebula Dark</h3>
@@ -870,7 +870,6 @@
                         </div>
                     </div>
                     <div class="card-footer">
-                        <!-- ✅ Wallpaper ZIP pack ka link -->
                         <a href="./themes/wallpapers-vol1.zip" download class="btn-card btn-primary">
                             <i class="fas fa-download"></i> Download Pack
                         </a>
@@ -942,22 +941,20 @@
                         </a>
                     </div>
                 </div>
-
             </div>
 
             <div class="section-footer">
-                <button class="btn btn-outline">
-                    <span>View All Themes</span>
+                <a href="https://www.capcut.com/profile/Iy3FAfKUU6JU6KLiYpk9_zxKepd6uHMO0S_0HQleyZI" target="_blank" class="btn btn-outline">
+                    <i class="fas fa-cut"></i>
+                    <span>Follow on CapCut</span>
                     <i class="fas fa-arrow-right"></i>
-                </button>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- =============================================
          STICKERS SECTION
-         📁 Files: stickers/ folder mein rakho
-         Example: stickers/emoji-pack.zip
          ============================================= -->
     <section id="stickers" class="section stickers-section">
         <div class="container">
@@ -970,7 +967,6 @@
             </div>
 
             <div class="items-grid">
-
                 <!-- Sticker Pack 1 -->
                 <div class="item-card sticker-card">
                     <div class="sticker-preview">😂🔥💯🎉</div>
@@ -1036,14 +1032,6 @@
                         </a>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="section-footer">
-                <button class="btn btn-outline">
-                    <span>View All Stickers</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -1062,10 +1050,8 @@
             </div>
 
             <div class="items-grid">
-
                 <!-- NFT 1 -->
                 <div class="item-card nft-card">
-                    <!-- <img src="./nfts/previews/genesis-1.jpg" alt="Genesis #001" class="nft-preview"> -->
                     <div class="nft-preview-placeholder">🌌</div>
                     <div class="nft-price-row">
                         <div>
@@ -1138,14 +1124,6 @@
                         </a>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="section-footer">
-                <button class="btn btn-outline">
-                    <span>View All NFTs</span>
-                    <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
         </div>
     </section>
@@ -1168,6 +1146,12 @@
                      alt="DigitalDairy786"
                      style="border-radius: 50%; border: 3px solid #00ffc8; width: 120px; height: 120px;">
                 <div style="margin-top: 20px; display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://youtube.com/@rana-w7e2b" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-youtube"></i> YouTube
+                    </a>
+                    <a href="https://www.capcut.com/profile/Iy3FAfKUU6JU6KLiYpk9_zxKepd6uHMO0S_0HQleyZI" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-cut"></i> CapCut
+                    </a>
                     <a href="https://tiktok.com/@moeezfather4" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-tiktok"></i> TikTok
                     </a>
@@ -1176,9 +1160,6 @@
                     </a>
                     <a href="https://github.com/RANA786G" target="_blank" class="btn btn-secondary">
                         <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <a href="https://threads.net/rh0786123" target="_blank" class="btn btn-secondary">
-                        <i class="fab fa-meta"></i> Threads
                     </a>
                 </div>
             </div>
@@ -1210,39 +1191,65 @@
     <!-- Scripts -->
     <script src="script.js"></script>
 
-    <!-- ✅ VIDEO FALLBACK SCRIPT -->
+    <!-- Intro Sequence Controller -->
     <script>
-        // Agar video load na ho to image dikho
-        document.querySelectorAll('.intro-video').forEach(video => {
-            video.addEventListener('error', function () {
-                this.style.display = 'none';
-                const fallback = this.parentElement.querySelector('.intro-image-fallback');
-                if (fallback) {
-                    fallback.style.display = 'block';
-                    fallback.style.position = 'absolute';
-                    fallback.style.top = '0';
-                    fallback.style.left = '0';
-                    fallback.style.width = '100%';
-                    fallback.style.height = '100%';
-                    fallback.style.objectFit = 'cover';
-                    fallback.style.zIndex = '0';
-                }
-            });
-
-            // Jab slide active ho tab video play karo
-            const observer = new MutationObserver(() => {
-                if (video.closest('.intro-slide').classList.contains('active')) {
-                    video.currentTime = 0;
-                    video.play().catch(() => {});
-                } else {
-                    video.pause();
-                }
-            });
-
-            observer.observe(video.closest('.intro-slide'), {
-                attributes: true,
-                attributeFilter: ['class']
-            });
+        document.addEventListener('DOMContentLoaded', function() {
+            const introSequence = document.getElementById('introSequence');
+            const slides = document.querySelectorAll('.intro-slide');
+            const progressBar = document.getElementById('introProgress');
+            const skipBtn = document.getElementById('skipIntro');
+            
+            let currentSlide = 0;
+            const totalSlides = slides.length;
+            
+            // Check if intro has been seen
+            if (localStorage.getItem('digidapp-intro-seen')) {
+                introSequence.style.display = 'none';
+                return;
+            }
+            
+            function hideIntro() {
+                introSequence.style.opacity = '0';
+                setTimeout(() => {
+                    introSequence.style.display = 'none';
+                    localStorage.setItem('digidapp-intro-seen', 'true');
+                }, 1000);
+            }
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[index].classList.add('active');
+                currentSlide = index;
+                progressBar.style.width = '0%';
+            }
+            
+            function startSlideshow() {
+                let slideDuration = parseInt(slides[currentSlide].dataset.duration) || 7000;
+                let startTime = Date.now();
+                
+                // Progress bar
+                const progressInterval = setInterval(() => {
+                    const elapsed = Date.now() - startTime;
+                    const progress = (elapsed / slideDuration) * 100;
+                    progressBar.style.width = Math.min(progress, 100) + '%';
+                }, 50);
+                
+                // Next slide
+                setTimeout(() => {
+                    clearInterval(progressInterval);
+                    if (currentSlide < totalSlides - 1) {
+                        showSlide(currentSlide + 1);
+                        startSlideshow();
+                    } else {
+                        hideIntro();
+                    }
+                }, slideDuration);
+            }
+            
+            showSlide(0);
+            startSlideshow();
+            
+            skipBtn.addEventListener('click', hideIntro);
         });
     </script>
 </body>
