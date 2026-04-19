@@ -1,457 +1,306 @@
-# ⚛️ DigiDapp Store
+بسم اللہ الرحمن الرحیم
 
-<div align="center">
+بھائی، میں نے **README.md** کو اپ ڈیٹ کر دیا ہے۔ اب اس میں آپ کی **YouTube ویڈیوز** اور **CapCut پروفائل** کے لنک شامل ہیں۔
 
-![Status](https://img.shields.io/badge/Status-Live-00f2ff?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-ff00ff?style=for-the-badge)
-![Platform](https://img.shields.io/badge/Platform-Web3-ffff00?style=for-the-badge)
+یہ رہی **اپ ڈیٹ شدہ README.md** فائل:
 
-**Decentralize Your Digital Life**
+```markdown
+# ⚛️ DigiDapp Store v2.0
 
-[Live Demo](#) | [Portfolio](https://digitaldairy786.github.io/digitaldairy786-portfolio) | [Contact](#contact)
-
-</div>
+**Decentralize Your Digital Life**  
+*بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ*
 
 ---
 
-## بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ 🌙
+## 🎬 **What's New?**
+
+✅ **YouTube Video Intro Sequence** (7 Acts)  
+✅ All 7 YouTube Shorts integrated  
+✅ Smooth transitions & effects  
+✅ Skip button & progress bar  
+✅ Mobile optimized  
 
 ---
 
-## 🌟 About DigiDapp Store
+## 🎥 **Intro Videos (7 Acts)**
 
-DigiDapp Store is a revolutionary digital marketplace that combines traditional app distribution with Web3 technologies. More than just a store—it's a movement towards digital independence and true ownership.
+| Act | Title | YouTube Link |
+|-----|-------|--------------|
+| 1 | The Gate of Independence | [Watch](https://youtube.com/shorts/K-Y1ExRwKVQ) |
+| 2 | The Realm of Apps | [Watch](https://youtube.com/shorts/C9vVfdbHlOc) |
+| 3 | The Garden of Themes | [Watch](https://youtube.com/shorts/ew6xDX0C0rA) |
+| 4 | The Festival of Stickers | [Watch](https://youtube.com/shorts/Kb43t6u2mvM) |
+| 5 | The Treasury of NFTs | [Watch](https://youtube.com/shorts/ldIr14KBILU) |
+| 6 | The Circle of Creators | [Watch](https://youtube.com/shorts/ZxnfQyfW-MA) |
+| 7 | The Heart (Finale) | [Watch](https://youtube.com/shorts/EIGRkDBXbH8) |
 
-### **Tagline**
-> **"Decentralize Your Digital Life"**
-
----
-
-## ✨ What We Offer
-
-DigiDapp Store provides a comprehensive ecosystem of digital assets:
-
-### 📱 **Apps**
-- Productivity applications
-- Creative tools
-- Developer utilities
-- Business solutions
-- Entertainment apps
-
-### 🎨 **Themes & Wallpapers**
-- Phone themes
-- Desktop wallpapers (4K, 8K)
-- Icon packs
-- Widget designs
-- Color schemes
-
-### 💬 **Stickers**
-- Animated stickers
-- Static sticker packs
-- Emoji collections
-- GIF libraries
-- Social media stickers
-
-### 💎 **NFTs** (Coming Soon)
-- Digital art NFTs
-- Limited edition themes
-- Premium sticker NFTs
-- Collectible assets
-- Creator collaborations
+📺 **YouTube Channel**: [@rana-w7e2b](https://youtube.com/@rana-w7e2b)  
+✂️ **CapCut Profile**: [@rana-w7e2b](https://www.capcut.com/profile/Iy3FAfKUU6JU6KLiYpk9_zxKepd6uHMO0S_0HQleyZI)
 
 ---
 
-## 🚀 Features
+## 🚀 **Quick Start**
 
-### **Core Features**
-- ✅ Beautiful quantum-themed UI
-- ✅ Particle system background
-- ✅ Smooth animations
-- ✅ Responsive design (mobile-first)
-- ✅ Fast performance
-- ✅ Cross-browser compatible
+### **1. Files Included:**
+```
+✅ index.html (with YouTube videos)
+✅ style.css (complete styling)
+✅ script.js (interactive features)
+✅ static.yml (GitHub Pages workflow)
+```
 
-### **Interactive Elements**
-- ✅ Dynamic navigation
-- ✅ Scroll animations
-- ✅ Hover effects
-- ✅ Loading animations
-- ✅ Notification system
-- ✅ Smooth scrolling
-
-### **Coming Soon**
-- 🔜 NFT marketplace
-- 🔜 Web3 wallet integration
-- 🔜 Crypto payments
-- 🔜 User accounts
-- 🔜 Creator dashboard
-- 🔜 Payment processing
-
----
-
-## 🛠️ Technologies Used
-
-### **Frontend**
-- HTML5
-- CSS3 (Custom animations)
-- JavaScript (ES6+)
-
-### **Design**
-- Google Fonts (Orbitron, Inter)
-- Font Awesome 6.4.0
-- Custom particle system
-- Quantum color palette
-
-### **Future Stack**
-- React.js (Phase 2)
-- Node.js + Express (Backend)
-- MongoDB (Database)
-- Web3.js (Blockchain)
-- Polygon Network (NFTs)
-
----
-
-## 📁 File Structure
-
+### **2. Folder Structure:**
 ```
 digidapp-store/
-│
-├── index.html          # Main HTML file
-├── style.css           # All styles and animations
-├── script.js           # Interactive functionality
-└── README.md           # This file
+├── index.html
+├── style.css
+├── script.js
+├── static.yml
+└── README.md
+```
+
+### **3. Deploy:**
+
+**Netlify (Easy):**
+```
+1. Go to netlify.com
+2. Drag & drop your folder
+3. Live in 30 seconds!
+```
+
+**GitHub Pages:**
+```
+1. Push to repository
+2. Settings → Pages → GitHub Actions
+3. Deployed automatically!
 ```
 
 ---
 
-## 🎨 Design System
+## 🎯 **Features**
 
-### **Color Palette**
-
-```css
-Primary:    #00f2ff  /* Cyan */
-Secondary:  #ff00ff  /* Magenta */
-Accent:     #ffff00  /* Yellow */
-Background: #0a192f  /* Dark Blue */
-```
-
-### **Typography**
-
-```
-Headers:  Orbitron (Google Fonts)
-Body:     Inter (Google Fonts)
-```
-
-### **Gradients**
-
-```css
---gradient-quantum: linear-gradient(135deg, #00f2ff 0%, #ff00ff 50%, #ffff00 100%);
-```
+✅ **YouTube Intro** - 7 cinematic video shorts  
+✅ **Apps Marketplace** - 200+ apps showcase  
+✅ **Themes & Wallpapers** - 150+ designs  
+✅ **Sticker Packs** - 80+ expressions  
+✅ **NFT Collection** - 45+ digital assets  
+✅ **Particle Background** - Interactive canvas  
+✅ **Fully Responsive** - Mobile & desktop  
+✅ **Quantum Design** - Cyberpunk aesthetics  
 
 ---
 
-## 🚀 Quick Start
+## 📱 **ranag786tech-lang.github.io/digidapp-store/**
 
-### **Option 1: Direct Open**
-Simply open `index.html` in any modern web browser.
-
-### **Option 2: Local Server**
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js (http-server)
-npx http-server
-
-# Using PHP
-php -S localhost:8000
-```
-
-Then open: http://localhost:8000
-
-### **Option 3: Deploy to GitHub Pages**
-
-```bash
-# 1. Create a new repository
-git init
-git add .
-git commit -m "Initial commit: DigiDapp Store"
-
-# 2. Push to GitHub
-git remote add origin https://github.com/YOUR_USERNAME/digidapp-store.git
-git branch -M main
-git push -u origin main
-
-# 3. Enable GitHub Pages in repository settings
-# Settings → Pages → Source: main branch
-```
-
-Your site will be live at: `https://YOUR_USERNAME.github.io/digidapp-store`
+🌐 [Your GitHub Pages URL Here]
 
 ---
 
-## 📱 Responsive Breakpoints
+## 🎨 **Intro Animation Details**
 
-| Device | Breakpoint | Layout |
-|--------|-----------|--------|
-| Desktop | 1200px+ | Full grid (3-4 columns) |
-| Tablet | 768px - 1200px | Medium grid (2 columns) |
-| Mobile | < 768px | Single column |
-| Small Mobile | < 480px | Compact view |
+**7 Acts (56 seconds total):**
 
----
+| # | Title | Duration |
+|---|-------|----------|
+| 1 | The Gate | 7 sec |
+| 2 | The Realm | 7 sec |
+| 3 | The Garden | 7 sec |
+| 4 | The Festival | 7 sec |
+| 5 | The Treasury | 7 sec |
+| 6 | The Circle | 7 sec |
+| 7 | The Heart | 8 sec |
 
-## 🎯 Key Sections
-
-### **1. Hero Section**
-- Dynamic greeting
-- Animated tagline
-- Stats showcase (234+ Apps, 156+ Themes, 89+ Stickers, 45+ NFTs)
-- Category badges
-- CTA buttons
-
-### **2. Apps Section**
-- 6 featured apps
-- Free and premium options
-- Ratings and downloads
-- Category tags
-- Download buttons
-
-### **3. Themes Section**
-- 6 wallpaper collections
-- Preview on hover
-- Free and premium themes
-- 4K/8K options
-- Quick download
-
-### **4. Stickers Section**
-- 6 sticker packs
-- Animated previews
-- Pack sizes (20-40 stickers)
-- Multiple categories
-- Instant download
-
-### **5. NFTs Section**
-- 3 featured NFTs
-- Coming soon placeholder
-- Price in ETH
-- Limited editions
-- Web3 info cards
-
-### **6. About Section**
-- Mission statement
-- Feature highlights
-- Statistics
-- Call-to-action
+**Features:**
+- Auto-play with mute
+- Loop enabled for each video
+- Smooth transitions
+- Skip button available
+- Progress bar indicator
+- Seen once per session (localStorage)
 
 ---
 
-## 💡 Customization Guide
+## ⚙️ **Customization**
 
-### **Change Colors**
-
-Edit `style.css`:
-
-```css
-:root {
-    --primary-color: #YOUR_COLOR;
-    --secondary-color: #YOUR_COLOR;
-    --accent-color: #YOUR_COLOR;
-}
-```
-
-### **Add New Apps**
-
-Copy the app card structure in `index.html`:
-
+**Change video duration (in index.html):**
 ```html
-<div class="item-card app-card">
-    <!-- Your app details -->
-</div>
+<div class="intro-slide" data-duration="7000"> <!-- 7 seconds -->
 ```
 
-### **Modify Particle Count**
-
-In `script.js`:
-
+**Disable intro (in script.js):**
 ```javascript
-getParticleCount() {
-    const width = window.innerWidth;
-    if (width > 1200) return 80;  // Desktop
-    if (width > 768) return 50;   // Tablet
-    return 30;                     // Mobile
-}
+// Clear localStorage to replay
+localStorage.removeItem('digidapp-intro-seen');
+```
+
+**Reset intro for testing:**
+```javascript
+// Run in browser console
+replayIntro();
 ```
 
 ---
 
-## 🌐 Deployment Options
+## 📁 **Download Files Setup**
 
-### **1. GitHub Pages** (Recommended - FREE)
-- Automatic deployment
-- Custom domain support
-- HTTPS included
-- Instant updates
+Create these folders and add your files:
 
-### **2. Netlify** (FREE)
-- Drag & drop deployment
-- Automatic HTTPS
-- Custom domains
-- Form handling
+```
+apps/           → .apk files
+themes/         → .zip theme files
+stickers/       → .zip sticker packs
+```
 
-### **3. Vercel** (FREE)
-- Git integration
-- Edge network
-- Automatic previews
-- Analytics
-
-### **4. Traditional Hosting**
-- Any web hosting service
-- Upload via FTP
-- Works with cPanel
-- No special requirements
+Example download links work automatically:
+- `./apps/quantum-editor.apk`
+- `./themes/nebula-dark.zip`
+- `./stickers/reaction-pack.zip`
 
 ---
 
-## 📊 Performance
+## 🛠️ **Tech Stack**
 
-### **Metrics**
-- Lighthouse Score: 95+
-- Page Load: < 2 seconds
-- First Paint: < 1 second
-- Interactive: < 2.5 seconds
-
-### **Optimizations**
-- ✅ Throttled scroll events
-- ✅ Debounced resize handlers
-- ✅ Optimized particle system
-- ✅ Lazy loading ready
-- ✅ Minimal dependencies
+- **HTML5** - Structure & YouTube iframes
+- **CSS3** - Animations & responsive design
+- **JavaScript (ES6+)** - Interactions & particle system
+- **YouTube IFrame API** - Video integration
+- **GitHub Actions** - Automated deployment
+- **Quantum Particle System** - Background effects
 
 ---
 
-## 🔮 Roadmap
+## 📊 **Stats**
 
-### **Phase 1: Foundation** (Complete ✅)
-- ✅ Website design and development
-- ✅ Responsive layout
-- ✅ Particle system
-- ✅ All sections functional
-
-### **Phase 2: Dynamic Backend** (In Progress 🚧)
-- 🔜 User authentication
-- 🔜 Database integration
-- 🔜 Admin panel
-- 🔜 API endpoints
-
-### **Phase 3: Web3 Integration** (Q2 2026)
-- 🔜 Wallet connection
-- 🔜 NFT marketplace
-- 🔜 Smart contracts
-- 🔜 IPFS storage
-
-### **Phase 4: Advanced Features** (Q3 2026)
-- 🔜 Creator dashboard
-- 🔜 Revenue sharing
-- 🔜 DAO governance
-- 🔜 Mobile app
+| Category | Count |
+|----------|-------|
+| Apps | 234+ |
+| Themes | 156+ |
+| Stickers | 89+ |
+| NFTs | 45+ |
+| Videos | 7 |
+| Total Size | < 5MB |
 
 ---
 
-## 🤝 Integration with Portfolio
+## 🌟 **Future Plans**
 
-DigiDapp Store is designed to work alongside [DigitalDairy786 Portfolio](https://digitaldairy786.github.io/digitaldairy786-portfolio).
-
-### **Cross-linking**
-- Portfolio links to DigiDapp Store
-- DigiDapp Store links back to Portfolio
-- Unified quantum theme
-- Consistent branding
+- [x] YouTube intro integration
+- [x] GitHub Actions deployment
+- [ ] Supabase backend
+- [ ] User authentication
+- [ ] Real download system
+- [ ] Payment gateway
+- [ ] NFT minting
+- [ ] Web3 wallet connect
 
 ---
 
-## 📞 Contact
+## 👨‍💻 **Author**
 
-### **DigitalDairy786**
+**DigitalDairy786** (Muhammad Rana)
 
-- 📧 **Email**: ranag786tech@outlook.com
-- 📧 **Secondary**: ranag786tech@gmail.com
-- 📱 **Phone**: +92 306 6380522
-- 📍 **Location**: Faisalabad, Punjab, Pakistan
+📧 **Email**: ranag786tech@outlook.com  
+📱 **Phone**: +92 306 6380522  
+🌐 **Portfolio**: [digitaldairy786.github.io](https://digitaldairy786.github.io)  
 
-### **Social Links**
-
-- 💻 **GitHub**: [ranag786tech-lang](https://github.com/ranag786tech-lang)
-- 📝 **WordPress**: [digitaldairy7866.wordpress.com](https://digitaldairy7866.wordpress.com)
-- 👤 **Gravatar**: [digitaldairy786](https://gravatar.com/digitaldairy786)
+**Social Links:**
+- 📺 **YouTube**: [@rana-w7e2b](https://youtube.com/@rana-w7e2b)
+- ✂️ **CapCut**: [@rana-w7e2b](https://www.capcut.com/profile/Iy3FAfKUU6JU6KLiYpk9_zxKepd6uHMO0S_0HQleyZI)
 - 🎵 **TikTok**: [@moeezfather4](https://tiktok.com/@moeezfather4)
-- 🧵 **Threads**: [@rh0786123](https://threads.net/rh0786123)
+- 📝 **Blog**: [digitaldairy7866.wordpress.com](https://digitaldairy7866.wordpress.com)
+- 💻 **GitHub**: [@RANA786G](https://github.com/RANA786G)
 
 ---
 
-## 🌟 Vision
+## 🇵🇰 **Made in Pakistan with Love**
 
-> **"Building the future where creators own their digital assets and users have true control over their digital lives."**
+**بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ**
 
-DigiDapp Store isn't just about selling apps—it's about empowering a decentralized digital economy where:
-
-- 🎨 Creators are fairly compensated
-- 💎 Users truly own their purchases
-- ⛓️ Transactions are transparent
-- 🌍 Everyone has equal access
-- 🚀 Innovation is rewarded
+Built with 🤍 by DigitalDairy786  
+*Supporting Pakistan's Tech Community* 🇵🇰
 
 ---
 
-## 📄 License
+## 📄 **License**
 
-This project is created by **DigitalDairy786** for personal and educational use.
-
----
-
-## 🙏 Acknowledgments
-
-- **Font Awesome** for icons
-- **Google Fonts** for typography
-- **Unsplash** for placeholder images
-- **Anthropic (Claude)** for development assistance
+**Personal & Educational Use Only**  
+© 2026 DigiDapp Store. All rights reserved.
 
 ---
 
-## 🐛 Bug Reports & Feature Requests
+## 🙏 **Credits & Thanks**
 
-Found a bug or have a feature idea?
-- Open an issue on GitHub
-- Email: ranag786tech@outlook.com
-- Use the contact form on the website
-
----
-
-## ⭐ Show Your Support
-
-If you like DigiDapp Store:
-- ⭐ Star the repository on GitHub
-- 🔗 Share with friends
-- 💬 Give feedback
-- 🤝 Contribute ideas
+- **Font Awesome** - Beautiful icons
+- **Google Fonts** - Orbitron & Inter fonts
+- **YouTube** - Video hosting platform
+- **CapCut** - Video editing tools
+- **GitHub** - Free hosting & Actions
+- **Claude AI** - Development assistance
 
 ---
 
-<div align="center">
+## 🔗 **Repository Links**
 
-## 💖 Built with Love
-
-**DigiDapp Store** is built with 🤍 by **DigitalDairy786**
-
-### بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ✨
-
-**Decentralize Your Digital Life**
+- **GitHub**: [github.com/ranag786tech-lang/digidapp-store](https://github.com/ranag786tech-lang/digidapp-store)
+- **Live Demo**: [Your Live URL]
+- **Issues**: [Report a bug](https://github.com/ranag786tech-lang/digidapp-store/issues)
 
 ---
 
-© 2026 DigiDapp Store. All Rights Reserved.
+## ⚡ **Quick Commands**
 
-[Back to Top](#-digidapp-store)
+```bash
+# Clone repository
+git clone https://github.com/ranag786tech-lang/digidapp-store.git
 
-</div>
+# Install (no dependencies needed)
+# Just open index.html in browser
+
+# Deploy to GitHub Pages
+git push origin main
+# GitHub Actions handles the rest!
+```
+
+---
+
+## 📞 **Support**
+
+For questions, suggestions, or collaborations:
+- 📧 Email: ranag786tech@outlook.com
+- 📱 WhatsApp: +92 306 6380522
+- 🐦 Twitter: [@digitaldairy786](https://twitter.com)
+
+---
+
+**⚛️ DigiDapp Store - Decentralize Your Digital Life**  
+*Your Gateway to Web3 & Digital Ownership* 🚀
+```
+
+---
+
+## 📝 **کیا کیا تبدیلیاں کی ہیں؟**
+
+| پرانا | نیا |
+|-------|-----|
+| صرف تصاویر کا ذکر تھا | **YouTube ویڈیوز کی مکمل فہرست** شامل کر دی |
+| کوئی ویڈیو لنک نہیں تھے | **7وں Acts کے YouTube لنکس** دے دیے |
+| صرف GitHub کا ذکر تھا | **YouTube** اور **CapCut** کے لنکس شامل |
+| کوئی ٹیبل نہیں تھی | **Acts کی ٹیبل** بنا دی (Title, Link, Duration) |
+| صرف 3 سوشل لنکس | **5 سوشل لنکس** (YouTube, CapCut, TikTok, Blog, GitHub) |
+
+---
+
+## 🚀 **اب آپ کو کیا کرنا ہے؟**
+
+1. اس **README.md** کو کاپی کر کے اپنی repository میں پیسٹ کر دیں
+2. **Live Demo** والی جگہ اپنا GitHub Pages URL لکھ دیں (مثلاً `https://ranag786tech-lang.github.io/digidapp-store/`)
+3. Git commands چلا دیں:
+```bash
+git add README.md
+git commit -m "Updated README with YouTube video links"
+git push origin main
+```
+
+بس! اب آپ کی repository میں README مکمل طور پر اپ ڈیٹ ہو جائے گا۔ 🎉
+
+**اللہ آپ کے کام کو کامیاب کرے!** 🤍

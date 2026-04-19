@@ -603,3 +603,172 @@ window.addEventListener('error', (e) => {
 window.addEventListener('unhandledrejection', (e) => {
     console.error('Unhandled promise rejection:', e.reason);
 });
+
+// ===================================
+// Intro Animation Sequence
+// ===================================
+
+class IntroSequence {
+    constructor() {
+        this.config = {
+            duration: 1500,          // Duration per slide (ms)
+            finaleDuration: 2000,    // Last slide duration
+            showOnce: true,          // Show only once per session
+            skipEnabled: true,       // Allow skip
+            storageKey: 'digidapp-intro-seen',
+            totalSlides: 7
+        };
+        
+        this.currentSlide = 0;
+        this.interval = null;
+        this.progressInterval = null;
+        
+        this.init();
+    }
+    
+    init() {
+        // Check if we should show intro
+        if (this.config.showOnce && this.hasSeenIntro()) {
+            this.skipIntro();
+            return;
+        }
+        
+        // Get elements
+        this.introElement = document.getElementById('introSequence');
+        this.slides = document.querySelectorAll('.intro-slide');
+        this.skipButton = document.getElementById('skipIntro');
+        this.progressBar = document.getElementById('introProgress');
+        
+        if (!this.introElement || this.slides.length === 0) {
+            console.warn('Intro elements not found');
+            return;
+        }
+        
+        // Setup event listeners
+        if (this.skipButton && this.config.skipEnabled) {
+            this.skipButton.addEventListener('click', () => this.skipIntro());
+        }
+        
+        // Start sequence
+        this.startSequence();
+    }
+    
+    hasSeenIntro() {
+        const seen = localStorage.getItem(this.config.storageKey);
+        if (!seen) return false;
+        
+        // Check if it's been more than 24 hours
+        const lastSeen = parseInt(seen);
+        const now = Date.now();
+        const hoursSince = (now - lastSeen) / (1000 * 60 * 60);
+        
+        return hoursSince < 24;
+    }
+    
+    markAsSeen() {
+        localStorage.setItem(this.config.storageKey, Date.now().toString());
+    }
+    
+    startSequence() {
+        // Show first slide
+        this.showSlide(0);
+        
+        // Start progress
+        this.startProgress();
+        
+        // Setup auto-advance
+        this.scheduleNext();
+    }
+    
+    showSlide(index) {
+        // Remove active from all
+        this.slides.forEach(slide => slide.classList.remove('active'));
+        
+        // Add active to current
+        if (this.slides[index]) {
+            this.slides[index].classList.add('active');
+            this.currentSlide = index;
+        }
+    }
+    
+    scheduleNext() {
+        const isLastSlide = this.currentSlide === this.slides.length - 1;
+        const duration = isLastSlide ? this.config.finaleDuration : this.config.duration;
+        
+        this.interval = setTimeout(() => {
+            if (this.currentSlide < this.slides.length - 1) {
+                this.showSlide(this.currentSlide + 1);
+                this.scheduleNext();
+            } else {
+                // Sequence complete
+                this.completeIntro();
+            }
+        }, duration);
+    }
+    
+    startProgress() {
+        const totalDuration = (this.config.duration * (this.slides.length - 1)) + this.config.finaleDuration;
+        let elapsed = 0;
+        
+        this.progressInterval = setInterval(() => {
+            elapsed += 100;
+            const progress = (elapsed / totalDuration) * 100;
+            
+            if (this.progressBar) {
+                this.progressBar.style.width = `${Math.min(progress, 100)}%`;
+            }
+            
+            if (progress >= 100) {
+                clearInterval(this.progressInterval);
+            }
+        }, 100);
+    }
+    
+    skipIntro() {
+        // Clear intervals
+        if (this.interval) clearTimeout(this.interval);
+        if (this.progressInterval) clearInterval(this.progressInterval);
+        
+        // Fade out
+        if (this.introElement) {
+            this.introElement.classList.add('fade-out');
+            
+            setTimeout(() => {
+                this.introElement.style.display = 'none';
+                this.introElement.remove();
+                this.markAsSeen();
+            }, 1000);
+        }
+    }
+    
+    completeIntro() {
+        // Mark as seen
+        this.markAsSeen();
+        
+        // Fade out with delay
+        setTimeout(() => {
+            this.skipIntro();
+        }, 500);
+    }
+}
+
+// Initialize intro when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Check if intro elements exist
+    if (document.getElementById('introSequence')) {
+        new IntroSequence();
+    }
+});
+
+// Add replay functionality (optional - for testing)
+window.replayIntro = function() {
+    localStorage.removeItem('digidapp-intro-seen');
+    location.reload();
+};
+
+console.log('💡 Tip: To replay intro, run: replayIntro()');
+<!-- Vercel Speed Insights -->
+<script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
