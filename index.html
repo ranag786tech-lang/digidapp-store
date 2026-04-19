@@ -1196,67 +1196,11 @@
 
     <!-- Scripts -->
     <script src="script.js"></script>
-
-    <!-- Intro Sequence Controller -->
+    
+    <!-- Vercel Speed Insights -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const introSequence = document.getElementById('introSequence');
-            const slides = document.querySelectorAll('.intro-slide');
-            const progressBar = document.getElementById('introProgress');
-            const skipBtn = document.getElementById('skipIntro');
-            
-            let currentSlide = 0;
-            const totalSlides = slides.length;
-            
-            // Check if intro has been seen
-            if (localStorage.getItem('digidapp-intro-seen')) {
-                introSequence.style.display = 'none';
-                return;
-            }
-            
-            function hideIntro() {
-                introSequence.style.opacity = '0';
-                setTimeout(() => {
-                    introSequence.style.display = 'none';
-                    localStorage.setItem('digidapp-intro-seen', 'true');
-                }, 1000);
-            }
-            
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                slides[index].classList.add('active');
-                currentSlide = index;
-                progressBar.style.width = '0%';
-            }
-            
-            function startSlideshow() {
-                let slideDuration = parseInt(slides[currentSlide].dataset.duration) || 7000;
-                let startTime = Date.now();
-                
-                // Progress bar
-                const progressInterval = setInterval(() => {
-                    const elapsed = Date.now() - startTime;
-                    const progress = (elapsed / slideDuration) * 100;
-                    progressBar.style.width = Math.min(progress, 100) + '%';
-                }, 50);
-                
-                // Next slide
-                setTimeout(() => {
-                    clearInterval(progressInterval);
-                    if (currentSlide < totalSlides - 1) {
-                        showSlide(currentSlide + 1);
-                        startSlideshow();
-                    } else {
-                        hideIntro();
-                    }
-                }, slideDuration);
-            }
-            
-            showSlide(0);
-            startSlideshow();
-            
-            skipBtn.addEventListener('click', hideIntro);
-        });
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
     </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
 </html>
