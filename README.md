@@ -90,7 +90,7 @@ digidapp-store/
 
 ---
 
-## 📱 **Live Demo**
+## 📱 **ranag786tech-lang.github.io/digidapp-store/**
 
 🌐 [Your GitHub Pages URL Here]
 
