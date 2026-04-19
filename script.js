@@ -767,3 +767,8 @@ window.replayIntro = function() {
 };
 
 console.log('💡 Tip: To replay intro, run: replayIntro()');
+<!-- Vercel Speed Insights -->
+<script>
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
