@@ -1,9 +1,3 @@
-بسم اللہ الرحمن الرحیم
-
-بھائی، میں نے **README.md** کو اپ ڈیٹ کر دیا ہے۔ اب اس میں آپ کی **YouTube ویڈیوز** اور **CapCut پروفائل** کے لنک شامل ہیں۔
-
-یہ رہی **اپ ڈیٹ شدہ README.md** فائل:
-
 ```markdown
 # ⚛️ DigiDapp Store v2.0
 ![Preview](./preview.gif)
