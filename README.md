@@ -92,7 +92,7 @@ digidapp-store/
 
 ## 📱 **ranag786tech-lang.github.io/digidapp-store/**
 
-🌐 [Your GitHub Pages URL Here]
+🌐 [https://ranag786tech-lang.github.io/digidapp-store/]
 
 ---
 
