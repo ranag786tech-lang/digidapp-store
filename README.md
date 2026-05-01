@@ -6,7 +6,7 @@
 
 ```markdown
 # ⚛️ DigiDapp Store v2.0
-
+![Preview](./preview.gif)
 **Decentralize Your Digital Life**  
 *بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ*
 
